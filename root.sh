@@ -16,7 +16,7 @@ apt update
 
 # Install Brave Repo
     # enable repositories over https
-    sudo apt install apt-transport-https curl
+    sudo apt install apt-transport-https curl -y
     # fetch GPG key
     sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
     # add Brave repository

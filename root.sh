@@ -11,11 +11,19 @@ builddir=$(pwd)
 # Add Custom Titus Rofi Deb Package
 dpkg -i 'Custom Packages/rofi_1.7.0-1_amd64.deb'
 
+# fetch GPG key
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+# add Brave repository
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+# update repositories cache
+sudo apt update
+# install Brave from configured repository
+
 # Update packages list
 apt update
 
 # Add base packages
-apt install unzip picom bspwm polybar sddm rofi kitty thunar flameshot neofetch sxhkd git lxpolkit lxappearance xorg -y
+apt install unzip picom bspwm polybar sddm rofi kitty thunar flameshot neofetch sxhkd git lxpolkit lxappearance xorg vim pulseaudio brave-browser -y
 apt install papirus-icon-theme lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls -y
 
 # Download Nordic Theme

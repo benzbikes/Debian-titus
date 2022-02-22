@@ -11,6 +11,8 @@ builddir=$(pwd)
 # Add Custom Titus Rofi Deb Package
 dpkg -i 'Custom Packages/rofi_1.7.0-1_amd64.deb'
 
+# Update packages list
+apt update
 
 # Install Brave Repo
     # enable repositories over https
@@ -23,8 +25,6 @@ dpkg -i 'Custom Packages/rofi_1.7.0-1_amd64.deb'
     sudo apt update
     # install Brave from configured repository
 
-# Update packages list
-apt update
 
 # Add base packages
 apt install unzip picom bspwm polybar sddm rofi kitty thunar flameshot neofetch sxhkd git lxpolkit lxappearance xorg vim pulseaudio brave-browser -y

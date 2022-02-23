@@ -27,22 +27,25 @@ apt update
 
 
 # Add base packages
-apt install unzip picom bspwm polybar sddm rofi kitty thunar flameshot neofetch sxhkd git lxpolkit lxappearance xorg vim pulseaudio brave-browser variety -y
+apt install unzip picom bspwm polybar sddm rofi kitty thunar flameshot neofetch sxhkd git lxpolkit lxappearance xorg vim pulseaudio brave-browser variety nitrogen -y
 apt install papirus-icon-theme lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls -y
 
 # Download Nordic Theme
 cd /usr/share/themes/
 git clone https://github.com/EliverLara/Nordic.git
-
+cd $builddir
 # Fira Code Nerd Font variant needed
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/FiraCode.zip
 unzip FiraCode.zip -d /usr/share/fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/Meslo.zip
 unzip Meslo.zip -d /usr/share/fonts
+#wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
+#unzip JetBrainsMono.zip -d /usr/share/fonts
 
 #Download Feather icon fonts
-wget https://github.com/oblador/react-native-vector-icons/raw/master/Fonts/Feather.ttf
-cp Feather.ttf /usr/share/fonts
+#wget https://github.com/oblador/react-native-vector-icons/raw/master/Fonts/Feather.ttf
+#cp Feather.ttf /usr/share/fonts
+cp -R fonts/* /usr/share/fonts
 
 fc-cache -vf
 

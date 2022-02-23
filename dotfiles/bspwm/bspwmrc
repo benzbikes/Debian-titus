@@ -73,7 +73,8 @@ sleep 0.50
 urxvtc &
 lxpolkit &
 picom --config "$HOME/.config/bspwm/picom.conf" &
-/usr/bin/synergys -f -d ERROR -n studio-pc -c /etc/synergy.conf -a 192.168.69.10:24800 --log ~/.local/log/synergy.log &
+variety &
+#/usr/bin/synergys -f -d ERROR -n studio-pc -c /etc/synergy.conf -a 192.168.69.10:24800 --log ~/.local/log/synergy.log &
 flameshot &
 synergypid=0
 while [ $synergypid -eq 0 ] 
@@ -87,7 +88,7 @@ while [ $pingresult -ne 0 ]; do
   pingresult=$(ping -c 1 1.1.1.1 > /dev/null ; echo $?)
 done
 bspc desktop -f ^6
-/bin/Discord &
+#/bin/Discord &
 discordpid=0
 while [ $discordpid -eq 0 ] 
 do
@@ -99,4 +100,4 @@ bspc desktop -f ^1
 bash ~/Git
 
 # Extra Specific Files for Titus (DELETE ME)
-sudo /home/titus/GitHub/Debian-titus/dotfiles/bspwm/mount-drives.sh
+#sudo /home/titus/GitHub/Debian-titus/dotfiles/bspwm/mount-drives.sh

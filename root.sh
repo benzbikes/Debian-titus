@@ -39,6 +39,11 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/FiraCode.z
 unzip FiraCode.zip -d /usr/share/fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/Meslo.zip
 unzip Meslo.zip -d /usr/share/fonts
+
+#Download Feather icon fonts
+wget https://github.com/oblador/react-native-vector-icons/raw/master/Fonts/Feather.ttf
+cp Feather.ttf /usr/share/fonts
+
 fc-cache -vf
 
 cd $builddir

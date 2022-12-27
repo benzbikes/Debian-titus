@@ -36,9 +36,9 @@ git clone https://github.com/EliverLara/Nordic.git
 cd $builddir
 # Fira Code Nerd Font variant needed
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/FiraCode.zip
-unzip FiraCode.zip -do /usr/share/fonts
+unzip FiraCode.zip -d /usr/share/fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/Meslo.zip
-unzip Meslo.zip -do /usr/share/fonts
+unzip Meslo.zip -d /usr/share/fonts
 #wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
 #unzip JetBrainsMono.zip -d /usr/share/fonts
 

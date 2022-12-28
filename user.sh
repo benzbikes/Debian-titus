@@ -3,7 +3,7 @@
 # Appearance pacakges
 
 #Ms-fonts
-sudo apt install ttf-mscorefonts-installer -y
+sudo nala install ttf-mscorefonts-installer -y
 # Add feather font
 #cp fonts/Feather.ttf ~/.fonts/
 #fc-cache -vf

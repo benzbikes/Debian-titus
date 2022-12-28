@@ -7,7 +7,6 @@ cp sources.list /etc/apt/sources.list
 
 username=$(id -u -n 1000)
 builddir=$(pwd)
-
 # Add Custom Titus Rofi Deb Package
 dpkg -i 'Custom Packages/rofi_1.7.0-1_amd64.deb'
 
@@ -25,10 +24,10 @@ apt update
     sudo apt update
     # install Brave from configured repository
 
-
+apt install nala -y
 # Add base packages
-apt install unzip picom bspwm polybar sddm rofi kitty thunar flameshot neofetch sxhkd git lxpolkit lxappearance xorg vim pulseaudio brave-browser variety nitrogen network-manager -y
-apt install papirus-icon-theme lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls -y
+nala install unzip picom bspwm polybar sddm rofi kitty thunar flameshot neofetch sxhkd git lxpolkit lxappearance xorg vim pulseaudio brave-browser variety nitrogen network-manager -y
+nala install papirus-icon-theme lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls -y
 
 # Download Nordic Theme
 cd /usr/share/themes/

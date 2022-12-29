@@ -37,6 +37,8 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/FiraCode.z
 unzip FiraCode.zip -d /usr/share/fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/Meslo.zip
 unzip Meslo.zip -d /usr/share/fonts
+wget https://github.com/isaif/polybar-wifi-ramp-icons/archive/refs/heads/main.zip
+unzip main.zip -d /usr/share/fonts
 #wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
 #unzip JetBrainsMono.zip -d /usr/share/fonts
 

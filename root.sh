@@ -24,9 +24,9 @@ apt update
     sudo apt update
     # install Brave from configured repository
 
-apt install nala -y
+#apt install nala -y
 # Add base packages
-nala install unzip picom bspwm polybar sddm rofi kitty thunar flameshot neofetch sxhkd git lxpolkit lxappearance xorg vim pulseaudio brave-browser variety nitrogen network-manager papirus-icon-theme lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls -y
+apt install unzip picom bspwm polybar sddm rofi kitty thunar flameshot neofetch sxhkd git lxpolkit lxappearance xorg vim pulseaudio brave-browser variety nitrogen network-manager papirus-icon-theme lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls ttf-mscorefonts-installer -y
 
 # Download Nordic Theme
 cd /usr/share/themes/
@@ -56,6 +56,16 @@ cp .Xnord /home/$username
 cp -R dotfiles/* /home/$username/.config/
 chown -R $username:$username /home/$username
 
+
+# Appearance pacakges
+
+touch ~/.config/variety/.firstrun
+# Layan Cursors
+mkdir -p $HOME/build
+cd "$HOME/build"
+git clone https://github.com/vinceliuice/Layan-cursors
+cd Layan-cursors
+./install.sh
 # Enable login manager
-sudo systemctl enable sddm
+sudo systemctl enable sddm --now
 
